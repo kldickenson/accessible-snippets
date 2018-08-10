@@ -1,0 +1,74 @@
+{
+	// Place your snippets for css here. Each snippet is defined under a snippet name and has a prefix, body and
+	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the
+	// same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
+
+	"Accessible Link Underlines": {
+		"prefix": "underline",
+		"body": [
+			"main p a {",
+				"text-decoration: none;",
+				"text-shadow: 0.05em 0 0 #fff, -0.05em 0 0 #fff, 0. 0.05em 0 #fff, 0 -0.05em 0 #fff, 0.1em 0 0 #fff, -0.1em 0 0 #fff, 0 0.1em 0 #fff, 0 -0.1em 0 #fff;",
+				"background-image: linear-gradient(to right, blue 0%, blue 100%);",
+				"background-repeat: repeat-x;",
+				"background-position: bottom 0.075em center;",
+				"background-size: 100% 0.05em;",
+			"}"
+		],
+		"description": "Accessible link underline"
+	},
+
+	"Accessible Focus": {
+		"prefix": "focus",
+		"body": [
+			"p a:focus {",
+				"outline: none;",
+				"background-color:  rgba(255, 255, 0,.5);",
+				"text-shadow: 0.05em 0 0 rgba(255, 255, 0,.50), -0.05em 0 0 rgba(255, 255, 0,.5), 0. 0.05em 0 rgba(255, 255, 0,.5), 0 -0.05em 0 rgba(255, 255, 0,.5), 0.1em 0 0 rgba(255, 255, 0,.5), -0.1em 0 0 rgba(255, 255, 0,.5), 0 0.1em 0 rgba(255, 255, 0,.5), 0 -0.1em 0 rgba(255, 255, 0,.5);",
+			"}"
+		],
+		"description": "Accessible link focus"
+	},
+
+	"External link, icon and alternative text": {
+		"prefix": "external",
+		"body": [
+			"[href^=\"http\"]:not([href*=\"$1\"])::after {",
+				"display: inline-block;",
+				"width: 1em;",
+				"height: 1em;",
+				"background: center url($2) no-repeat;",
+				"background-size: 75% auto;",
+				"content: '(external link)';",
+				"overflow: hidden;",
+				"white-space: nowrap;",
+				"text-indent: 1em;",
+			"}"
+		],
+		"description": "external link icon"
+	},
+
+	"Visually Hidden, visable to screen readers": {
+		"prefix": "hidden",
+		"body": [
+			".visually-hidden {",
+				"position: absolute;",
+				"width: 1px;",
+				"height: 1px;",
+				"overflow: hidden;",
+				"clip: rect(1px, 1px, 1px, 1px);"
+			"}"
+		],
+		"description": "Visually Hidden, visable to screen readers"
+	}
+}
